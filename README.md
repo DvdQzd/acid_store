@@ -23,7 +23,7 @@ http://localhost:3000/api
 
 ## Uso
 
-Para las ventas, las rutas `GET /products`, `GET /products/:id` y `POST /sales/create` son las que se pueden usar, las cuales son publicas.
+Para las ventas, las rutas `GET /products`, `GET /products/:id` y `POST /sales` son las que se pueden usar, las cuales son publicas.
 
 Para las rutas de administracion, se debe usar el token de autenticacion que se genera al iniciar sesion con el usuario `david` y la contraseña `1234`.
 
