@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
-import { Product } from './entities/product.entity';
+import { Repository, In } from 'typeorm';
+import { Product } from '../entities/product.entity';
 
 @Injectable()
 export class ProductsService {
@@ -29,5 +29,12 @@ export class ProductsService {
     async update(id: string, product: Product): Promise<Product> {
         await this.productsRepository.update(id, product);
         return this.productsRepository.findOne({where: {id: parseInt(id)}});
+    }
+
+    async getTotalPriceFromProductIds(productIds: number[]): Promise<number> {
+        const products = await this.productsRepository.findBy({ id: In(productIds) });
+        return products.reduce((total, product) => {
+            return total + product.price;
+        }, 0);
     }
 }
