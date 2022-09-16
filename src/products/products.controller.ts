@@ -2,9 +2,9 @@ import { Controller, Get, Post, Body, Param, Delete, Patch, UseGuards } from '@n
 import { ProductsService } from './products.service';
 import { Product } from '../entities/product.entity';
 import { ProductDto } from './dto/product.dto';
-import { Public } from 'src/auth/public.decorator';
+import { Public } from 'src/auth/decorators/public.decorator';
 import { ApiBearerAuth } from '@nestjs/swagger';
-import { Roles } from 'src/auth/roles.decorator';
+import { Roles } from 'src/auth/decorators/roles.decorator';
 import { RolesGuard } from 'src/auth/roles.guard';
 
 @Controller('products')
