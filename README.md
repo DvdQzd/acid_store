@@ -39,3 +39,7 @@ Para loguearse, se debe usar la ruta `POST /auth/login` con el body:
 ```
 
 El endpoint de `POST /auth/login` devuelve un token que se debe usar en las cabeceras de las peticiones a los endpoints de administracion, usando el boton `Authorize` de swagger.
+
+## Pendientes 
+
+Mejorar la seguridad (por ejemplo las passwords estan en texto plano, lol), agregar tests (aunque siendo un crud, tanto sentido no tiene), etc.
