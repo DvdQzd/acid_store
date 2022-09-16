@@ -9,6 +9,10 @@ async function bootstrap() {
     .setDescription('This is an API for the Acid Store challenge')
     .setVersion('1.0')
     .addTag('acid-store')
+    .addBearerAuth(
+      { type: 'http', scheme: 'Bearer', bearerFormat: 'JWT' },
+      'JWT',
+    )
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);

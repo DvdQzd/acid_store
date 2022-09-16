@@ -6,13 +6,10 @@ export class Sale {
     id?: number;
 
     @Column()
-    buyerDni: string;
+    buyerId: string;
 
     @Column()
     buyerName: string;
-
-    @Column()
-    buyerEmail: string;
 
     @Column()
     buyerAddress: string;

@@ -1,14 +1,12 @@
 import { ApiProperty } from '@nestjs/swagger';
 
 export class SaleDto {
+
     @ApiProperty()
-    buyerDni: string;
+    buyerId: string;
 
     @ApiProperty()
     buyerName: string;
-
-    @ApiProperty()
-    buyerEmail: string;
     
     @ApiProperty()
     buyerAddress: string;
