@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param, Delete, Patch } from '@nestjs/common';
 import { SalesService } from './sales.service';
 import { Sale } from 'src/entities/sale.entity';
 import { SaleDto } from './dto/sale.dto';
@@ -25,6 +25,11 @@ export class SalesController {
     async create(@Body() sale: SaleDto): Promise<Sale> {
         sale.total = await this.productsService.getTotalPriceFromProductIds(sale.productIds);
         return this.salesService.create(sale);
+    }
+
+    @Patch(':id')
+    async update(@Param('id') id: string, @Body() sale: SaleDto): Promise<Sale> {
+        return this.salesService.update(id, sale);
     }
 
     @Delete(':id')

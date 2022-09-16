@@ -29,6 +29,9 @@ export class Sale {
     @Column()
     paymentMethod: string;
 
+    @Column({default: 'pending'})
+    status: string;
+
     @Column({ nullable: true })
     total?: number;
 }

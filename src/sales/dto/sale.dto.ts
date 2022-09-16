@@ -19,5 +19,8 @@ export class SaleDto {
     @ApiProperty()
     paymentMethod: string;
 
+    @ApiProperty()
+    status: string;
+
     total?: number;
 }
