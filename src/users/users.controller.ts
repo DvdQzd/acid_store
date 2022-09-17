@@ -3,7 +3,7 @@ import { UsersService } from './users.service';
 import { User } from 'src/entities/user.entity';
 import { UserDto } from './dto/user.dto';
 import { ApiBearerAuth } from '@nestjs/swagger';
-import { RolesGuard } from 'src/auth/roles.guard';
+import { RolesGuard } from 'src/auth/guards/roles.guard';
 import { Roles } from 'src/auth/decorators/roles.decorator';
 
 @Controller('users')

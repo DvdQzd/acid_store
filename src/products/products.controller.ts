@@ -5,7 +5,7 @@ import { ProductDto } from './dto/product.dto';
 import { Public } from 'src/auth/decorators/public.decorator';
 import { ApiBearerAuth } from '@nestjs/swagger';
 import { Roles } from 'src/auth/decorators/roles.decorator';
-import { RolesGuard } from 'src/auth/roles.guard';
+import { RolesGuard } from 'src/auth/guards/roles.guard';
 
 @Controller('products')
 @ApiBearerAuth('JWT')

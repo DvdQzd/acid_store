@@ -5,7 +5,7 @@ import { SaleDto } from './dto/sale.dto';
 import { ProductsService } from 'src/products/products.service';
 import { Public } from 'src/auth/decorators/public.decorator';
 import { Roles } from 'src/auth/decorators/roles.decorator';
-import { RolesGuard } from 'src/auth/roles.guard';
+import { RolesGuard } from 'src/auth/guards/roles.guard';
 import { ApiBearerAuth } from '@nestjs/swagger';
 
 @Controller('sales')
